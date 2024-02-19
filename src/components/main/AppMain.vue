@@ -3,11 +3,13 @@
 <script>
     // Js componente
     import Section1 from './Section1.vue';
+    import Features from './Features.vue';
 
     export default {
         name: 'AppMain',
         components: {
-            Section1
+            Section1,
+            Features
         },
         data() {
             return {
@@ -24,7 +26,7 @@
 <template>
     <!-- html componente -->
     <Section1 />
-    
+    <Features />
 </template>
 
 
