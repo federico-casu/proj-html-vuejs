@@ -1,11 +1,15 @@
 
 <script>
 
-import NewComp from './components/NewComp.vue';
+import AppHeader from './components/header/AppHeader.vue';
+import AppMain from './components/main/AppMain.vue';
+import AppFooter from './components/footer/AppFooter.vue';
 
   export default {
     components: {
-      NewComp
+      AppHeader,
+      AppMain,
+      AppFooter
     },
     data() {
       return {
@@ -21,7 +25,9 @@ import NewComp from './components/NewComp.vue';
 
 <template>
 
-  <NewComp/>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 
 </template>
 

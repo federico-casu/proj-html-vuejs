@@ -1,8 +1,9 @@
 
+
 <script>
     // Js componente
     export default {
-        name: 'NewComp',
+        name: 'AppFooter',
         data() {
             return {
                 
@@ -22,7 +23,7 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style scoped>
     /* stile del componente */
 
     
