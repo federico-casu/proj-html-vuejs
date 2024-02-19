@@ -13,7 +13,7 @@ import AppFooter from './components/footer/AppFooter.vue';
     },
     data() {
       return {
-
+        
       }
     },
     methods: {

@@ -1,8 +1,14 @@
 
 <script>
     // Js componente
+
+    import NavMenu from './NavMenu.vue';
+
     export default {
         name: 'AppHeader',
+        components: {
+            NavMenu
+        },
         data() {
             return {
                menu: [ "home", "pages", "tournament", "shop", "blog", "contact" ] 
@@ -19,24 +25,14 @@
     <!-- html componente -->
 
     <header>
-        <div class="container">
+        <div id="top-bar" class="container">
             <!-- Logo -->
             <figure class="logo">
                 <img src="../../assets/img/menulogo.png" alt="RaxG">
             </figure>
     
             <!-- Menu -->
-            <nav>
-                <ul>
-                    <li v-for="(menu_voice, index) in menu" :key="index" >
-                        <a href="#">
-                            {{ menu_voice }}
-                            <!-- <img v-if="menu_voice != 'tournament' && menu_voice != 'contact'" src="../../assets/img/image.svg" alt=""> -->
-                            <svg v-if="menu_voice != 'tournament' && menu_voice != 'contact'" class="svg-inline--fa fa-angle-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"></path></svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <NavMenu :propsMenuVoices="menu"/>
     
             <div class="buttons">
                 <button id="search">
@@ -46,6 +42,20 @@
                 <button id="cart">
                     <svg class="svg-inline--fa fa-bag-shopping" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bag-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M112 112C112 50.14 162.1 0 224 0C285.9 0 336 50.14 336 112V160H400C426.5 160 448 181.5 448 208V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V208C0 181.5 21.49 160 48 160H112V112zM160 160H288V112C288 76.65 259.3 48 224 48C188.7 48 160 76.65 160 112V160zM136 256C149.3 256 160 245.3 160 232C160 218.7 149.3 208 136 208C122.7 208 112 218.7 112 232C112 245.3 122.7 256 136 256zM312 208C298.7 208 288 218.7 288 232C288 245.3 298.7 256 312 256C325.3 256 336 245.3 336 232C336 218.7 325.3 208 312 208z"></path></svg>
                     <span>0</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="cta" class="container">
+            <span>welcome to raxg</span>
+            <h1>are you ready for your<br>next challenge?</h1>
+            <div class="buttons">
+                <button>
+                    <span>read more</span>
+                    <svg class="svg-inline--fa fa-right-long" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504.3 273.6l-112.1 104c-6.992 6.484-17.18 8.218-25.94 4.406c-8.758-3.812-14.42-12.45-14.42-21.1L351.9 288H32C14.33 288 .0002 273.7 .0002 255.1S14.33 224 32 224h319.9l0-72c0-9.547 5.66-18.19 14.42-22c8.754-3.809 18.95-2.075 25.94 4.41l112.1 104C514.6 247.9 514.6 264.1 504.3 273.6z"></path></svg>
+                </button>
+                <button>
+                    <svg class="svg-inline--fa fa-play" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"></path></svg>
                 </button>
             </div>
         </div>
@@ -66,37 +76,13 @@
         height: 700px;
         padding: 1rem 0;
 
-        .container {
+        #top-bar {
             @include d-flex-align-center;
             justify-content: space-between;
             color: white;
+            height: 15%;
 
-            nav {
-                ul {
-                    @include d-flex-align-center;
-                    gap: 1rem;
-
-                    li {
-                        list-style-type: none;
-                        a {
-                            text-decoration: none;
-                            color: white;
-                            text-transform: uppercase;
-
-                            @include d-flex-align-center;
-                            gap: 0.2rem;
-
-                            > svg {
-                                height: 20px;
-                            }
-
-                            &:hover {
-                                color: $full-green;
-                            }
-                        }
-                    }
-                }
-            }
+            
 
             .buttons {
                 @include d-flex-align-center;
@@ -135,6 +121,78 @@
                     }
                 }
             }
+        }
+
+        #cta {
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            height: 85%;
+            
+        
+            @include d-flex-align-center;
+            flex-direction: column;
+            // justify-content: center;
+            // height: 100%;
+            
+            margin-top: 100px;
+            gap: 1.5rem;
+
+            > span {
+                color: $full-green;
+            }
+
+            h1 {
+                font-size: 3.2rem;
+            }
+
+            .buttons {
+                @include d-flex-align-center;
+                gap: 1.5rem;
+
+                > button {
+                    color: $deep-blue;
+                    background-color: $light-green;
+                    border: 0;
+                    height: 50px;
+                    cursor: pointer;
+                }
+
+                button:first-child {
+                    @include d-flex-align-center;
+                    border-radius: 5px;
+                    padding: 0.5rem 1rem;
+                    gap: 0.5rem;
+                    
+                    > span {
+                        text-transform: capitalize;
+                        // width: fit-content;
+                    }
+                    &:hover > svg {
+                        position: relative;
+                        left: 0.3rem;
+                    }
+
+                    > svg {
+                        height: 15px;
+                        
+                    }
+                }
+
+                button:last-child { 
+                    aspect-ratio: 1;
+                    @include d-flex-align-center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 1rem;
+
+                    > svg {
+                        height: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+
         }
 
 
