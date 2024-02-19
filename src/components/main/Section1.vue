@@ -1,8 +1,13 @@
 
 <script>
     // Js componente
+    import TopPlayers from './TopPlayers.vue';
+
     export default {
         name: 'Section1',
+        components: {
+            TopPlayers
+        },
         data() {
             return {
                 
@@ -18,6 +23,9 @@
 <template>
     <!-- html componente -->
     <section id="experience" class="">
+        <div class="container">
+            <TopPlayers />
+        </div>
         <div class="container">
             <div class="col images">
                 <figure>
@@ -74,15 +82,20 @@
 
     #experience {
         background-color: $dark-blue;
-        
+        position: relative;
 
+        div.container:first-child {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .container {
             display: flex;
             justify-content: center;
-
             .col {
                 flex-basis: 50%;
-                border: 1px solid lime;
+                // border: 1px solid lime;
                 margin-block: 200px 100px;
                 
                 padding: 3rem;

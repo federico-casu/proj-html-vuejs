@@ -59,6 +59,7 @@
                 </button>
             </div>
         </div>
+
     </header>
     
 </template>
@@ -80,7 +81,7 @@
             @include d-flex-align-center;
             justify-content: space-between;
             color: white;
-            height: 15%;
+            // height: 15%;
 
             
 
@@ -127,7 +128,7 @@
             color: white;
             text-align: center;
             text-transform: uppercase;
-            height: 85%;
+            // height: 85%;
             
         
             @include d-flex-align-center;
