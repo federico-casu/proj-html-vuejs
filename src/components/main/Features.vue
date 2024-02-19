@@ -69,6 +69,8 @@
 
     #features {
         background-color: #1a1943;
+        background-image: url('../../assets/img/Vector.png');
+        @include bg-center-cover;
         padding: 3rem 0;
 
         .container {

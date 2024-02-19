@@ -4,12 +4,14 @@
     // Js componente
     import Section1 from './Section1.vue';
     import Features from './Features.vue';
+    import LiveStreaming from './LiveStreaming.vue';
 
     export default {
         name: 'AppMain',
         components: {
             Section1,
-            Features
+            Features,
+            LiveStreaming
         },
         data() {
             return {
@@ -27,6 +29,7 @@
     <!-- html componente -->
     <Section1 />
     <Features />
+    <LiveStreaming />
 </template>
 
 
