@@ -1,5 +1,7 @@
 // RESETS - UTILITY CLASSES
 
+@use './partials/variables' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -18,4 +20,18 @@ html {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sectionTitle {
+    text-transform: capitalize;
+    font-size: 2.2rem;
+}
+
+.sectionLittleTitle {
+    text-transform: capitalize;
+    color: $full-green;
 }
