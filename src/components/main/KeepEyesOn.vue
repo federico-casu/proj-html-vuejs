@@ -220,6 +220,12 @@
                                     height: 50px;
                                     width: 120px;
                                     border-radius: 7px;
+
+                                    &:hover {
+                                        background-color: transparent;
+                                        color: $light-green;
+                                        border: 1px solid $light-green;
+                                    }
                                 }
                             }
 

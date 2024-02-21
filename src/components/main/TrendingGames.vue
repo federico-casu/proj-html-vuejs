@@ -141,6 +141,20 @@
                         gap: 0.5rem;
                         background-color: #152257;
 
+                        &:hover {
+                            background-color: $light-green;
+
+                            .game-info {
+                                button {
+                                    background-color: $dark-blue;
+
+                                    svg {
+                                        color: $light-green;
+                                    }
+                                }
+                            }
+                        }
+
                         .game-cover {
                             position: relative;
 

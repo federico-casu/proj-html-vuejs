@@ -102,6 +102,11 @@
                     border-radius: 12px;
                     background-color: $soft-deep-blue;
 
+                    &:hover {
+                        background-color: $light-green;
+                        color: $deep-blue;
+                    }
+
                     figure {
                         width: 80px;
                         aspect-ratio: 1;
@@ -109,12 +114,6 @@
                         background-color: $deep-blue;
                         padding: 1rem;
                     }
-                }
-
-                .card:first-child,
-                .card:last-child {
-                    background-color: $light-green;
-                    color: $deep-blue;
                 }
             }
     

@@ -156,6 +156,7 @@
                         background-color: #152257;
 
                         &:hover {
+                            background-color: $light-green;
                             .member-image {
                                 #socials {
                                     @include d-flex-align-center;
@@ -187,6 +188,10 @@
 
                                     @include d-flex-align-center;
                                     justify-content: center;
+
+                                    &:hover {
+                                        background-color: $light-green;
+                                    }
 
                                     svg {
                                         width: 20px;

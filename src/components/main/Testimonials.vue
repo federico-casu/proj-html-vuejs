@@ -30,6 +30,15 @@
                         <figure class="testimonial-image">
                             <img :src="`../../src/assets/img/${testimonial}`" :alt="testimonial">
                         </figure>
+                        <div class="testimony">
+                            <svg class="svg-inline--fa fa-quote-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"></path></svg>
+                            <p>
+                                Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget.
+                            </p>
+
+                            <h3>Mohammad Sala</h3>
+                            <span>CEO/Founder</span>
+                        </div>
                     </div>
                     <!-- buttons -->
                     
@@ -122,6 +131,41 @@
                     > .testimonial {
                         flex-basis: calc(100% / 4 - (1.5rem / 4));
                         width: calc(100% / 4 - (1.5rem / 4));
+                        position: relative;
+
+                        &:hover {
+                            .testimony {
+                                display: flex;
+                            }
+                        }
+
+                        .testimony {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: $dark-blue;
+                            padding: 1rem;
+
+                            display: none;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            svg {
+                                width: 50px;
+                                color: $full-green;
+                            }
+
+                            p {
+                                font-size: 1.2rem;
+                            }
+
+                            h3 {
+                                color: $full-green;
+                            }
+
+                        }
 
                         .testimonial-image {
                             position: relative;
