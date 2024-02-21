@@ -11,6 +11,7 @@
     import TeamMembers from './TeamMembers.vue';
     import Testimonials from './Testimonials.vue';
     import GamerShop from './GamerShop.vue';
+    import LatestNews from './LatestNews.vue';
 
     export default {
         name: 'AppMain',
@@ -23,7 +24,8 @@
             KeepEyesOn,
             TeamMembers,
             Testimonials,
-            GamerShop
+            GamerShop,
+            LatestNews
         },
         data() {
             return {
@@ -48,6 +50,7 @@
     <TeamMembers />
     <Testimonials />
     <GamerShop />
+    <LatestNews />
 </template>
 
 
