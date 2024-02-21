@@ -9,6 +9,7 @@
     import TrendingGames from './TrendingGames.vue';
     import KeepEyesOn from './KeepEyesOn.vue';
     import TeamMembers from './TeamMembers.vue';
+    import Testimonials from './Testimonials.vue';
 
     export default {
         name: 'AppMain',
@@ -19,7 +20,8 @@
             UpcomingMatch,
             TrendingGames,
             KeepEyesOn,
-            TeamMembers
+            TeamMembers,
+            Testimonials
         },
         data() {
             return {
@@ -42,6 +44,7 @@
     <TrendingGames />
     <KeepEyesOn />
     <TeamMembers />
+    <Testimonials />
 </template>
 
 
