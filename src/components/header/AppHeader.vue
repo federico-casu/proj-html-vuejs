@@ -127,6 +127,8 @@
 
     header {
         background-image: url('../../assets/img/banner1.png');
+        background-color: rgba(32, 32, 70, 0.3);
+        background-blend-mode: overlay;
         @include bg-center-cover;
         height: 700px;
         padding: 1rem 0;

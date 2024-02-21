@@ -85,6 +85,8 @@
     #streaming {
         padding: 5rem 0;
         background-image: url('../../assets/img/v-bg.png');
+        background-color: rgba(32, 32, 70, 0.6);
+        background-blend-mode: overlay;
         @include bg-center-cover;
 
         .container {

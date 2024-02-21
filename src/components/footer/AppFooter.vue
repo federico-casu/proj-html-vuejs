@@ -88,6 +88,8 @@
 
     footer {
         background-image: url('../../assets/img/banner1.png');
+        background-color: rgba(32, 32, 70, 0.3);
+        background-blend-mode: overlay;
         @include bg-center-cover;
         padding-block: 12rem 2rem;
         position: relative;
@@ -163,6 +165,11 @@
     
                     li {
                         text-transform: uppercase;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $full-green;
+                        }
                     }
                 }
             }
@@ -208,6 +215,11 @@
 
                     @include d-flex-align-center;
                     justify-content: center;
+
+                    &:hover {
+                        background-color: $full-green;
+                        cursor: pointer;
+                    }
 
                     svg {
                         width: 20px;

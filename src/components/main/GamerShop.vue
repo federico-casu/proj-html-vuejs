@@ -79,6 +79,8 @@
     #gamer-shop {
         // background-color: $dark-blue;
         background-image: url('../../assets/img/shop-bg.png');
+        background-color: rgba(32, 32, 70, 0.8);
+        background-blend-mode: overlay;
         color: white;
         padding: 7rem 0;
         
