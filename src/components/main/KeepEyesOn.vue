@@ -134,6 +134,68 @@
                     @include d-flex-align-center;
                     gap: 0.5rem;
                     margin-top: 2rem;
+                    // position: relative;
+
+                    .player:first-child {
+
+                        .player-image {
+                            position: relative;
+                        }
+                        .player-image::before {
+                            content: ' ';
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.2;
+                            background-image: url('../../assets/img/1.png');
+                            background-repeat: no-repeat;
+                            background-position: right;
+                            background-size: contain;
+                        }
+                    }
+
+                    .player:nth-child(2) {
+                        .player-image {
+                            position: relative;
+                        }
+                        .player-image::before {
+                            content: ' ';
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.2;
+                            background-image: url('../../assets/img/5.png');
+                            background-repeat: no-repeat;
+                            background-position: right;
+                            background-size: contain;
+                        }
+                    }
+
+                    .player:last-child {
+                        .player-image {
+                            position: relative;
+                        }
+                        .player-image::before {
+                            content: ' ';
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.2;
+                            background-image: url('../../assets/img/3.png');
+                            background-repeat: no-repeat;
+                            background-position: right;
+                            background-size: contain;
+                        }
+                    }
 
                     > .player {
                         flex-basis: calc(100% / 3 - (1rem / 3));
