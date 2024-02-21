@@ -42,6 +42,46 @@
                 <button id="cart">
                     <svg class="svg-inline--fa fa-bag-shopping" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bag-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M112 112C112 50.14 162.1 0 224 0C285.9 0 336 50.14 336 112V160H400C426.5 160 448 181.5 448 208V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V208C0 181.5 21.49 160 48 160H112V112zM160 160H288V112C288 76.65 259.3 48 224 48C188.7 48 160 76.65 160 112V160zM136 256C149.3 256 160 245.3 160 232C160 218.7 149.3 208 136 208C122.7 208 112 218.7 112 232C112 245.3 122.7 256 136 256zM312 208C298.7 208 288 218.7 288 232C288 245.3 298.7 256 312 256C325.3 256 336 245.3 336 232C336 218.7 325.3 208 312 208z"></path></svg>
                     <span>0</span>
+                    <div class="cart-items">
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img src="../../assets/img/cart1.png" alt="">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Sony PS5 White</h3>
+                                    <span>Quality: $254</span>
+                                </div>
+                                <svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="../../assets/img/cart2.png" alt="">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>A4 Tec Mouse</h3>
+                                    <span>Quality: $121</span>
+                                </div>
+                                <svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="../../assets/img/cart3.png" alt="">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Gear VR Led</h3>
+                                    <span>Quality: $514</span>
+                                </div>
+                                <svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+                            </li>
+                        </ul>
+
+                        <div class="total-order">
+                            <span>Total Order</span>
+                            <span>$854.00</span>
+                        </div>
+                        <button class="check-out">CHECK OUT</button>
+                    </div>
                 </button>
             </div>
         </div>
@@ -123,6 +163,11 @@
 
                 #cart {
                     position: relative;
+                    &:hover {
+                        .cart-items{
+                            display: flex;
+                        }
+                    }
 
                     > span {
                         text-align: center;
@@ -133,6 +178,70 @@
                         background-color: $light-blue;
                         padding: 0.2rem 0.4rem;
                         border-radius: 50%;
+                    }
+
+                    .cart-items {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        right: 20%;
+                        width: 300px;
+                        color: white;
+
+                        // display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        z-index: 1;
+
+                        background-color: rgba(32, 32, 70, 0.8);
+
+                        padding: 1rem;
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+                            li {
+                                @include d-flex-align-center;
+                                color: white;
+                                justify-content: space-between;
+
+                                figure {
+                                    border: 1px solid $full-green;
+                                }
+
+                                .product-info {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: 0.5rem;
+                                }
+
+                                svg {
+                                    width: 15px;
+                                    color: $full-green;
+                                }
+                            }
+                        }
+
+                        .total-order {
+                            @include d-flex-align-center;
+                            justify-content: space-between;
+                            font-size: 1rem;
+                        }
+
+                        .check-out {
+                            background-color: $light-green;
+                            border: 0;
+                            color: $dark-blue;
+                            font-size: 1rem;
+                            font-weight: bold;
+
+                            padding: 1rem 0;
+                        }
+
+
                     }
                 }
             }
