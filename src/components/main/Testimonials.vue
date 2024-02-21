@@ -122,12 +122,6 @@
                     > .testimonial {
                         flex-basis: calc(100% / 4 - (1.5rem / 4));
                         width: calc(100% / 4 - (1.5rem / 4));
-                        // height: 300px;
-                        // height: 320px;
-                        // display: flex;
-                        // flex-direction: column;
-                        // gap: 0.5rem;
-                        background-color: #152257;
 
                         .testimonial-image {
                             position: relative;
@@ -139,36 +133,6 @@
                                 width: 100%;
                                 object-fit: cover;
                             }
-
-                            // #socials {
-                            //     position: absolute;
-                            //     bottom: 1rem;
-                            //     left: 50%;
-                            //     transform: translateX(-50%);
-                                
-                            //     color: white;
-
-                            //     // @include d-flex-align-center;
-                            //     display: none;
-                            //     gap: 1rem;
-
-                            //     li {
-                            //         background-color: $soft-deep-blue;
-                            //         width: 30px;
-                            //         aspect-ratio: 1;
-                            //         border-radius: 50%;
-                            //         padding: 7px;
-
-                            //         @include d-flex-align-center;
-                            //         justify-content: center;
-
-                            //         svg {
-                            //             width: 20px;
-                            //             aspect-ratio: 1;
-                            //         }
-                            //     }
-                                
-                            // }
                         }
                     }
                 }
