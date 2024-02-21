@@ -6,6 +6,8 @@
     import Features from './Features.vue';
     import LiveStreaming from './LiveStreaming.vue';
     import UpcomingMatch from './UpcomingMatch.vue';
+    import TrendingGames from './TrendingGames.vue';
+    import KeepEyesOn from './KeepEyesOn.vue';
 
     export default {
         name: 'AppMain',
@@ -13,7 +15,9 @@
             Section1,
             Features,
             LiveStreaming,
-            UpcomingMatch
+            UpcomingMatch,
+            TrendingGames,
+            KeepEyesOn
         },
         data() {
             return {
@@ -33,6 +37,8 @@
     <Features />
     <LiveStreaming />
     <UpcomingMatch />
+    <TrendingGames />
+    <KeepEyesOn />
 </template>
 
 
