@@ -14,7 +14,8 @@ import { store } from './store';
     },
     data() {
       return {
-        store
+        store,
+        menu: [ "home", "pages", "tournament", "shop", "blog", "contact" ] 
       }
     },
     methods: {
@@ -28,7 +29,7 @@ import { store } from './store';
 
   <AppHeader />
   <AppMain />
-  <AppFooter />
+  <AppFooter :propsMenu="menu" />
 
 </template>
 

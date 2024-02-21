@@ -9,9 +9,12 @@
         components: {
             NavMenu
         },
+        props: {
+            propsMenu: Array
+        },
         data() {
             return {
-                menu: [ "home", "pages", "tournament", "shop", "blog", "contact" ] 
+                // menu: [ "home", "pages", "tournament", "shop", "blog", "contact" ]
             }
         },
         methods: {
@@ -43,7 +46,7 @@
         
                 <!-- Menu -->
                 <ul>
-                    <li v-for="(item, index) in menu">{{ item }}</li>
+                    <li v-for="(item, index) in propsMenu" :key="index">{{ item }}</li>
                 </ul>
 
             </div>
