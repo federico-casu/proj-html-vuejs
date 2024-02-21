@@ -93,7 +93,8 @@
     #latest-news {
         background-color: $dark-blue;
         color: white;
-        padding: 7rem 0;
+        
+        padding-block: 7rem 10rem;
 
         .container {
             // border: 1px solid red;
